@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.dropmenu {
+    .menu {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .icon {
+        transition: 0.5s ease;
+    }
+
+    .rotate {
+        transform: rotate(90deg);
+    }
+
+}
+
+.Sidebar {
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    overflow: auto;
+    height: 700px;
+    box-shadow: 0 0 5px rgb(138, 138, 138);
+
+    @media (max-width:576px) {
+        display: none;
+    }
+
+    @media (min-width:576px) {
+        display: none;
+    }
+
+    @media (min-width:992px) {
+        display: initial;
+    }
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #fafafa;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #8b8b8b;
+    }
+
+    .closebtn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        i {
+            &:before {
+                line-height: unset;
+            }
+        }
+
+        @media (min-width:992px) {
+            display: none;
+        }
+    }
+
+    .logo {
+        text-align: center;
+
+        img {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+        }
+    }
+
+    .nav-menu {
+        ul {
+            list-style: none;
+            line-height: 40px;
+            margin: 0;
+
+            li {
+
+                i {
+                    padding-right: 10px;
+                    color: #0e47ba;
+                }
+
+                a {
+                    color: black;
+
+                    &:hover {
+                        color: crimson;
+                    }
+                }
+            }
+
+            .nav-right {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .bi-caret-right {
+                    color: gray;
+                    font-size: 14px;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+.mainpage {}
