@@ -13,8 +13,27 @@ a {
   text-decoration: none;
 }
 
+i:before {
+  line-height: unset !important;
+}
+
+input:focus {
+  box-shadow: none !important;
+}
+
+:focus-visible {
+  outline: none;
+}
+
 .dropmenu .menu {
   display: none;
+}
+.dropmenu .menu a {
+  color: blue !important;
+  font-size: 15px !important;
+}
+.dropmenu .menu a:hover {
+  color: crimson !important;
 }
 .dropmenu .show {
   display: block;
@@ -63,9 +82,6 @@ a {
   top: 10px;
   right: 10px;
 }
-.Sidebar .closebtn i:before {
-  line-height: unset;
-}
 @media (min-width: 992px) {
   .Sidebar .closebtn {
     display: none;
@@ -103,4 +119,26 @@ a {
   color: gray;
   font-size: 14px;
   padding: 0;
+}
+
+.mainpage .topbar .form {
+  display: flex;
+}
+.mainpage .topbar .form input {
+  height: 35px;
+  width: 200px;
+  padding: 5px;
+  border: 1px solid gray;
+  border-left: none;
+  border-radius: 0 20px 20px 0;
+}
+.mainpage .topbar .form .icon button {
+  height: 35px;
+  width: 35px;
+  display: grid;
+  place-content: center;
+  border: 1px solid gray;
+  border-right: none;
+  background-color: transparent;
+  border-radius: 20px 0 0 20px;
 }/*# sourceMappingURL=style.css.map */
