@@ -22,3 +22,13 @@ menu.forEach((mymenu, index) => {
         }
     });
 });
+
+// toggle menu
+function showMenu() {
+    let showmenu = document.getElementById("sidebar");
+    showmenu.classList.add("sideshow");
+}
+function closeMenu() {
+    let showmenu = document.getElementById("sidebar");
+    showmenu.classList.remove("sideshow");
+}

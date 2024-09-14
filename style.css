@@ -45,6 +45,17 @@ input:focus {
   transform: rotate(90deg);
 }
 
+@media (max-width: 576px) {
+  .sideshow {
+    left: 0 !important;
+  }
+}
+@media (min-width: 576px) {
+  .sideshow {
+    left: 0 !important;
+  }
+}
+
 .Sidebar {
   overflow: auto;
   height: 700px;
@@ -52,17 +63,32 @@ input:focus {
 }
 @media (max-width: 576px) {
   .Sidebar {
-    display: none;
+    position: fixed;
+    left: -1000px;
+    top: 0;
+    transition: 0.5s ease;
+    background-color: white;
+    z-index: 11;
   }
 }
 @media (min-width: 576px) {
   .Sidebar {
-    display: none;
+    position: fixed;
+    left: -1000px;
+    top: 0;
+    transition: 0.5s ease;
+    background-color: white;
+    z-index: 11;
   }
 }
 @media (min-width: 992px) {
   .Sidebar {
-    display: initial;
+    position: unset;
+    left: unset;
+    top: unset;
+    transition: unset;
+    background-color: unset;
+    z-index: unset;
   }
 }
 .Sidebar::-webkit-scrollbar {
@@ -121,13 +147,19 @@ input:focus {
   padding: 0;
 }
 
+.mainpage .topbar .userimg img {
+  height: 50px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .mainpage .topbar .form {
   display: flex;
 }
 .mainpage .topbar .form input {
   height: 35px;
   width: 200px;
-  padding: 5px;
+  padding: 5px 10px;
   border: 1px solid gray;
   border-left: none;
   border-radius: 0 20px 20px 0;

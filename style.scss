@@ -29,6 +29,17 @@ input {
     outline: none;
 }
 
+// ========================================================
+@mixin fixedpos() {
+    position: fixed;
+    left: -1000px;
+    top: 0;
+    transition: 0.5s ease;
+    background-color: white;
+    z-index: 11;
+}
+
+// ========================================================
 .dropmenu {
     .menu {
         display: none;
@@ -57,24 +68,36 @@ input {
 
 }
 
+.sideshow {
+    @media (max-width:576px) {
+        left: 0 !important;
+    }
+
+    @media (min-width:576px) {
+        left: 0 !important;
+    }
+}
+
 .Sidebar {
-    // position: fixed;
-    // top: 0;
-    // left: 0;
     overflow: auto;
     height: 700px;
     box-shadow: 0 0 5px rgb(138, 138, 138);
 
     @media (max-width:576px) {
-        display: none;
+        @include fixedpos;
     }
 
     @media (min-width:576px) {
-        display: none;
+        @include fixedpos;
     }
 
     @media (min-width:992px) {
-        display: initial;
+        position: unset;
+        left: unset;
+        top: unset;
+        transition: unset;
+        background-color: unset;
+        z-index: unset;
     }
 
     &::-webkit-scrollbar {
@@ -152,13 +175,21 @@ input {
 
 .mainpage {
     .topbar {
+        .userimg {
+            img {
+                height: 50px;
+                width: 50px;
+                object-fit: cover;
+            }
+        }
+
         .form {
             display: flex;
 
             input {
                 height: 35px;
                 width: 200px;
-                padding: 5px;
+                padding: 5px 10px;
                 border: 1px solid gray;
                 border-left: none;
                 border-radius: 0 20px 20px 0;
