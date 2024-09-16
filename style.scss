@@ -80,7 +80,7 @@ input {
 
 .Sidebar {
     overflow: auto;
-    height: 700px;
+    height: 725px;
     box-shadow: 0 0 5px rgb(138, 138, 138);
 
     @media (max-width:576px) {
@@ -92,9 +92,9 @@ input {
     }
 
     @media (min-width:992px) {
-        position: unset;
-        left: unset;
-        top: unset;
+        position: fixed;
+        left: 0;
+        top: 0;
         transition: unset;
         background-color: unset;
         z-index: unset;
@@ -207,6 +207,30 @@ input {
                     border-radius: 20px 0 0 20px;
 
                 }
+            }
+        }
+    }
+
+    .header {
+        background-color: teal;
+
+        .breadcrumb-item+.breadcrumb-item::before {
+            color: white;
+        }
+    }
+
+    .graphSec {
+        .mychart {
+            @media (max-width:576px) {
+                height: 250px !important;
+            }
+
+            @media (min-width:576px) {
+                height: 250px !important;
+            }
+
+            @media (min-width:1200px) {
+                height: 400px !important;
             }
         }
     }

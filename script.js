@@ -32,3 +32,45 @@ function closeMenu() {
     let showmenu = document.getElementById("sidebar");
     showmenu.classList.remove("sideshow");
 }
+
+// chart
+const ctx = document.getElementById('myChart');
+
+new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['2014', '2016', '2018', '2020', '2022', '2024'],
+        datasets: [{
+            label: 'Technology Grow',
+            data: [0, 50, 80, 100, 150, 166],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+var newchart = document.getElementById("myChart1")
+new Chart(newchart, {
+    type: 'polarArea',
+    data: {
+        labels: ['2014', '2016', '2018', '2020', '2022', '2024'],
+        datasets: [{
+            label: 'Technology Grow',
+            data: [0, 50, 80, 100, 150, 166],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+})

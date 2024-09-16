@@ -58,7 +58,7 @@ input:focus {
 
 .Sidebar {
   overflow: auto;
-  height: 700px;
+  height: 725px;
   box-shadow: 0 0 5px rgb(138, 138, 138);
 }
 @media (max-width: 576px) {
@@ -83,9 +83,9 @@ input:focus {
 }
 @media (min-width: 992px) {
   .Sidebar {
-    position: unset;
-    left: unset;
-    top: unset;
+    position: fixed;
+    left: 0;
+    top: 0;
     transition: unset;
     background-color: unset;
     z-index: unset;
@@ -173,4 +173,25 @@ input:focus {
   border-right: none;
   background-color: transparent;
   border-radius: 20px 0 0 20px;
+}
+.mainpage .header {
+  background-color: teal;
+}
+.mainpage .header .breadcrumb-item + .breadcrumb-item::before {
+  color: white;
+}
+@media (max-width: 576px) {
+  .mainpage .graphSec .mychart {
+    height: 250px !important;
+  }
+}
+@media (min-width: 576px) {
+  .mainpage .graphSec .mychart {
+    height: 250px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .mainpage .graphSec .mychart {
+    height: 400px !important;
+  }
 }/*# sourceMappingURL=style.css.map */
