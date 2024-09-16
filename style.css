@@ -17,6 +17,10 @@ i:before {
   line-height: unset !important;
 }
 
+p {
+  margin: 0;
+}
+
 input:focus {
   box-shadow: none !important;
 }
