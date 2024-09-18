@@ -238,4 +238,29 @@ input {
             }
         }
     }
+
+    .rateSec {
+        .list {
+
+            .name,
+            .use {
+                color: gray;
+            }
+        }
+
+        .btnarrow {
+            height: 50px;
+            width: 50px;
+
+            &:hover {
+                animation: movebtn 0.5s ease infinite alternate;
+            }
+        }
+    }
+}
+
+@keyframes movebtn {
+    100% {
+        transform: translateY(-5px);
+    }
 }

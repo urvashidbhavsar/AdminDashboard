@@ -198,4 +198,21 @@ input:focus {
   .mainpage .graphSec .mychart {
     height: 400px !important;
   }
+}
+.mainpage .rateSec .list .name,
+.mainpage .rateSec .list .use {
+  color: gray;
+}
+.mainpage .rateSec .btnarrow {
+  height: 50px;
+  width: 50px;
+}
+.mainpage .rateSec .btnarrow:hover {
+  animation: movebtn 0.5s ease infinite alternate;
+}
+
+@keyframes movebtn {
+  100% {
+    transform: translateY(-5px);
+  }
 }/*# sourceMappingURL=style.css.map */
