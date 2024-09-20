@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -209,6 +210,20 @@ input:focus {
 }
 .mainpage .rateSec .btnarrow:hover {
   animation: movebtn 0.5s ease infinite alternate;
+}
+.mainpage .livereport .reportData li::marker {
+  content: "🤩";
+}
+.mainpage .trandingTec .frontend-item,
+.mainpage .trandingTec .backend-item {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.mainpage .trandingTec #frontend-list,
+.mainpage .trandingTec #backend-list {
+  height: 300px;
+  overflow: auto;
 }
 
 @keyframes movebtn {

@@ -257,6 +257,33 @@ input {
             }
         }
     }
+
+    .livereport {
+        .reportData {
+            li {
+                &::marker {
+                    content: "\1F929";
+                }
+            }
+        }
+
+    }
+
+    .trandingTec {
+
+        .frontend-item,
+        .backend-item {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #frontend-list,
+        #backend-list {
+            height: 300px;
+            overflow: auto;
+        }
+    }
 }
 
 @keyframes movebtn {
